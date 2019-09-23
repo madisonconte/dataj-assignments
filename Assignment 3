@@ -1,0 +1,6 @@
+Assignment 3
+For this assignment, I chose to clone FiveThirtyEight's data repository, looking specifically at data/bechdel. This contains the data/code for a story they did about the relationship between the Bechdel test and box office numbers.
+They got a list of movies that passed or failed the Bechdel test from bechdeltest.com and box office info at the-numbers.com to over 1600 movies and their relationship between passing the test and budgets and profits.
+It includes year of release, result of the test, and money info like budget and gross profit.
+This is a really interesting topic. The Bechdel test really has a low bar for passing, and still almost half of the movies didn't. It was interesting to go through their analysis of how that relates to what Hollywood is really about: $$$.
+It's helpful in data/bechdel/analyze-bechdel.R that they describe the purpose of each command, because by the url, I assume they did this with R, so I didn't recognize the commands.
