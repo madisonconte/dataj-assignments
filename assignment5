@@ -1,0 +1,35 @@
+Assignment 5
+Documentation
+
+#Add the BeautifulSoup toolkit
+import urllib2, csv
+from bs4 import BeautifulSoup
+
+#Creates a new csv file
+outfile = open('jaildata.csv', 'w')
+writer = csv.writer(outfile)
+
+#Tells it which website to pull from
+url = 'https://report.boonecountymo.org/mrcjava/servlet/SH01_MP.I00290s?max_rows=500'
+html = urllib2.urlopen(url).read()
+
+#Imports the BeautifulSoup HTML
+soup = BeautifulSoup(html, "html.parser")
+
+#Tells BeautifulSoup where to find the table
+tbody = soup.find('tbody', {'class': 'stripe'})
+
+#Finds the rows within the table
+rows = tbody.find_all('tr')
+
+for row in rows:
+    #Find all the cells in each row
+    cells = row.find_all('td')
+
+    #Make a list of the data in each cell
+    data = []
+    for cell in cells:
+        data.append(cell.text.encode('utf-8'))
+   
+    #Write it in the file we made
+    writer.writerow(data)
