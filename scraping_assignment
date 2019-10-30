@@ -1,0 +1,19 @@
+### setup
+
+python -V
+workon dataj python
+python -V
+pip -V
+pwd
+ls
+cd Desktop
+ls
+cd Code
+install BeautifulSoup
+install Requests
+python
+
+### importing libraries
+
+import requests
+url = 'mshp.dps.missouri.gov/HP68/SearchAction'
